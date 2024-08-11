@@ -81,6 +81,15 @@ public class UserServiceImpl implements UserService {
             throw new RuntimeException("An error occurred while fetching users by role");
         }
     }
+    
+    @Override
+    public List<UserDTO> findCustomersByTourGuide(Long guideId) {
+        List<User> customers = userDao.findCustomersByTourGuide(guideId);
+        return customers.stream()
+                        .map(customer -> modelMapper.map(customer, UserDTO.class))
+                        .collect(Collectors.toList());
+    }
+
 
 	
 

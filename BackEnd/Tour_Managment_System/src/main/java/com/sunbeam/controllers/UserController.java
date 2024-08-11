@@ -51,4 +51,14 @@ public class UserController {
         }
         return ResponseEntity.ok(users);
     }
+    
+    @GetMapping("/guide/{guideId}/customers")
+    public ResponseEntity<?> findCustomersByTourGuide(@PathVariable Long guideId) {
+        List<UserDTO> customers = userService.findCustomersByTourGuide(guideId);
+        if (customers.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No customers found for this guide");
+        }
+        return ResponseEntity.ok(customers);
+    }
+
 }

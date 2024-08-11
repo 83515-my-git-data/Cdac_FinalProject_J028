@@ -14,4 +14,6 @@ public interface UserService {
     ApiResponse deleteUser(Long id);
     ApiResponse updateUser(Long id, UserDTO userDto);
     List<UserDTO> getUsersByRole(String role);
+    public List<UserDTO> findCustomersByTourGuide(Long guideId);
+
 }

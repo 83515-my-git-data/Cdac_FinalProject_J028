@@ -1,5 +1,6 @@
 package com.sunbeam.controllers;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,4 +39,7 @@ public class BookingController {
     public ResponseEntity<?> deleteBooking(@PathVariable Long bookingId) {
         return ResponseEntity.ok(bookingService.deleteBooking(bookingId));
     }
+    
+    
+
 }
