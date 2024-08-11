@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>spring_boot_backend_security_jwt_template</artifactId>
+	<artifactId>Tour_Managment_System</artifactId>
 	<version>0.0.1</version>
-	<name>spring_boot_backend_security_jwt_template</name>
+	<name>Tour_Managment_System</name>
 	<description>Template Project for Spring Boot based Backend, swagger,model mapper, JWT , security </description>
 	<properties>
 		<java.version>11</java.version>

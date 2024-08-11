@@ -11,6 +11,7 @@ import com.sunbeam.daos.UserDao;
 import com.sunbeam.dto.ApiResponse;
 import com.sunbeam.dto.BookingDTO;
 import com.sunbeam.dto.BookingRespDTO;
+import com.sunbeam.dto.UserDTO;
 import com.sunbeam.entities.Booking;
 import com.sunbeam.entities.TourPackage;
 import com.sunbeam.entities.User;
@@ -92,4 +93,6 @@ public class BookingServiceImpl implements BookingService {
         bookingDao.save(booking);
         return new ApiResponse("Booking updated successfully");
     }
+
+
 }

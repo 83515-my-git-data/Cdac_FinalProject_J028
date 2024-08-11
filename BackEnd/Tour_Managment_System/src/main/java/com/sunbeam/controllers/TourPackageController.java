@@ -13,6 +13,7 @@ import com.sunbeam.dto.TourPackageDTO;
 import com.sunbeam.services.TourPackageService;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/tour-packages")
 public class TourPackageController {
     @Autowired
