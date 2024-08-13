@@ -1,0 +1,12 @@
+/* src/components/Login.css */
+/* .login-background {
+    background: url('/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+  } */
+  
+  .login-logo {
+    width: 100px;
+    height: auto;
+  }
+  

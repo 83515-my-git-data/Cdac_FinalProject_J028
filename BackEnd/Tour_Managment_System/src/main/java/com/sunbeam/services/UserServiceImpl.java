@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import com.sunbeam.custom_exceptions.ResourceNotFoundException;
 import com.sunbeam.daos.UserDao;
 import com.sunbeam.dto.ApiResponse;
+import com.sunbeam.dto.AuthRequest;
 import com.sunbeam.dto.UserDTO;
 import com.sunbeam.entities.Role;
 import com.sunbeam.entities.User;
@@ -89,6 +90,15 @@ public class UserServiceImpl implements UserService {
                         .map(customer -> modelMapper.map(customer, UserDTO.class))
                         .collect(Collectors.toList());
     }
+    
+    public UserDTO authenticateUser(AuthRequest dto) {
+
+		User user = userDao.findByEmailAndPassword(
+				dto.getEmail(), dto.getPassword())
+				.orElseThrow(() ->
+				new ResourceNotFoundException("Invalid Email or Password !!!!!!"));
+		return modelMapper.map(user, UserDTO.class);
+	}
 
 
 	
