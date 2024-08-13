@@ -15,4 +15,5 @@ public interface UserDao extends JpaRepository<User, Long> {
     List<User> findByRole(Role role);
     @Query("SELECT b.customer FROM Booking b WHERE b.tourPackage.guide.id = :guideId")
     List<User> findCustomersByTourGuide(@Param("guideId") Long guideId);
+    Optional<User> findByEmailAndPassword(String email,String password);
 }

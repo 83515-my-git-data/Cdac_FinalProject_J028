@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import com.sunbeam.dto.UserDTO;
 import com.sunbeam.services.UserService;
 import com.sunbeam.dto.ApiResponse;
+import com.sunbeam.dto.AuthRequest;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
@@ -60,5 +61,15 @@ public class UserController {
         }
         return ResponseEntity.ok(customers);
     }
+    
+    @PostMapping("/signin") 
+	public ResponseEntity<?> signInUser(
+			@RequestBody AuthRequest request) {
+		System.out.println("in signin " + request);
+		
+			return ResponseEntity.ok(
+					userService.authenticateUser(request));
+		
+	}
 
 }
