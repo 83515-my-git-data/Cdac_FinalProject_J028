@@ -10,6 +10,7 @@ import com.sunbeam.dto.BookingDTO;
 import com.sunbeam.services.BookingService;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/bookings")
 public class BookingController {
     @Autowired

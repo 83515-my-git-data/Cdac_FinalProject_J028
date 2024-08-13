@@ -1,6 +1,7 @@
 package com.sunbeam.services;
 
 import com.sunbeam.dto.ApiResponse;
+import com.sunbeam.dto.AuthRequest;
 import com.sunbeam.dto.UserDTO;
 import com.sunbeam.entities.Role;
 import com.sunbeam.entities.User;
@@ -15,5 +16,6 @@ public interface UserService {
     ApiResponse updateUser(Long id, UserDTO userDto);
     List<UserDTO> getUsersByRole(String role);
     public List<UserDTO> findCustomersByTourGuide(Long guideId);
+    UserDTO authenticateUser(AuthRequest dto);
 
 }
